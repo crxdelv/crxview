@@ -1,28 +1,28 @@
-const first = `&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-&#56;"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=&#49;.&#48;"&gt;
-  &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
-  &lt;title&gt;crxview &amp;vert; view-source alternative for mobile devices.&lt;/title&gt;
-&lt;/head&gt;
-&lt;style&gt;
+const first = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>crxview &vert; view-source alternative for mobile devices.</title>
+</head>
+<style>
   body {
-    margin: &#48;;
+    margin: 0;
   }
-  &#35;editor {
-    width: &#49;&#48;&#48;%;
-    height: &#49;&#48;&#48;%;
+  #editor {
+    width: 100%;
+    height: 100%;
   }
   .ace_mobile-menu { display: none !important }
-&lt;/style&gt;
-&lt;body&gt;
-  &lt;div id="editor"&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/ace-builds@&#49;.&#51;&#55;.&#50;/src-min/ace.js"&gt;&lt;/script&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/ace-builds@&#49;.&#51;&#55;.&#50;/src-min/mode-html.js"&gt;&lt;/script&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/ace-builds@&#49;.&#51;&#55;.&#50;/src-min/theme-tomorrow_night_eighties.js"&gt;&lt;/script&gt;
-&lt;script type="text/plain" id="editor-value"&gt;`;
+</style>
+<body>
+  <div id="editor"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/ace-builds@1.37.2/src-min/ace.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ace-builds@1.37.2/src-min/mode-html.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ace-builds@1.37.2/src-min/theme-tomorrow_night_eighties.js"></script>
+<script type="text/plain" id="editor-value">`;
 const last = `&lt;/script&gt;
 &lt;script defer&gt;
   const value = document.getElementById("editor-value").textContent.trim();
