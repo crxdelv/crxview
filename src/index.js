@@ -50,7 +50,8 @@ module.exports = async (req, res) => {
   try {
     const f = await fetch(`https://creprox.vercel.app${req.url}`);
     const val = await f.text();
-    return first + sanitize(val) + last;
+    res.statusCode = 200;
+    res.end(first + sanitize(val) + last);
   } catch(e) {
     res.statusCode = 500;
     res.end(`<p>500 Internal Error: ${sanitize(e.stack)}</p>`);
