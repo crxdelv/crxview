@@ -13,6 +13,9 @@ const first = `<!DOCTYPE html>
   #editor {
     width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .ace_mobile-menu { display: none !important }
 </style>
@@ -51,7 +54,7 @@ module.exports = async (req, res) => {
     const f = await fetch(`https://creprox.vercel.app${req.url}`);
     const val = await f.text();
     res.statusCode = 200;
-    res.end(first + sanitize(val) + last);
+    res.end(first + val + last);
   } catch(e) {
     res.statusCode = 500;
     res.end(`<p>500 Internal Error: ${sanitize(e.stack)}</p>`);
