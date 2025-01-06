@@ -33,7 +33,7 @@ const last = `</script>
   editor.session.setMode("ace/mode/html");
   editor.setTheme("ace/theme/tomorrow_night_eighties");
   editor.session.setUseWorker(false);
-  editor.setShowPrintMargin(false);
+  editor.setShowPrintMargin(true);
   editor.setReadOnly(true);
   editor.setValue(value);
 </script>
