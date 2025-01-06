@@ -23,8 +23,8 @@ const first = `<!DOCTYPE html>
 <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.37.2/src-min/mode-html.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.37.2/src-min/theme-tomorrow_night_eighties.js"></script>
 <script type="text/plain" id="editor-value">`;
-const last = `&lt;/script&gt;
-&lt;script defer&gt;
+const last = `</script>
+<script defer>
   const value = document.getElementById("editor-value").textContent.trim();
   const editor = ace.edit("editor");
   editor.session.setMode("ace/mode/html");
@@ -33,8 +33,8 @@ const last = `&lt;/script&gt;
   editor.setShowPrintMargin(false);
   editor.setReadOnly(true);
   editor.setValue(value);
-&lt;/script&gt;
-&lt;/html&gt;`;
+</script>
+</html>`;
 
 function sanitize(input) {
   return input.replaceAll("&", "&amp;").replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]|\p{Emoji}/gu, (x) => `&#${x.codePointAt(0)};`).replace(/[^\x00-\x7F]/g, (x) => `&#${x.charCodeAt(0)};`).replaceAll("<", "&lt;").replaceAll(">", "&gt;");
